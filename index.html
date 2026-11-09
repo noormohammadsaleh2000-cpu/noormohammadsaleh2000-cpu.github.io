@@ -1,549 +1,116 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#DCEAF3">
-
+<meta name="theme-color" content="#7898AD">
+<meta name="description" content="Official medical and academic profile of Dr. Noor Mohammad Saleh | سلامت پایدار">
 <title>دکتور نورمحمد صالح | سلامت پایدار</title>
-
-<meta name="description" content="صفحه رسمی پزشکی، علمی و پژوهشی دکتور نورمحمد صالح">
-<meta name="author" content="Dr. Noor Mohammad Saleh">
-
 <style>
-:root {
-  --blue-light: #DCEAF3;
-  --blue-mid: #B9CEDD;
-  --blue: #7898AD;
-  --blue-dark: #496477;
-  --brown: #E9D3BF;
-  --brown-dark: #795C49;
-  --cream: #F8F5EF;
-  --text: #493A2F;
-  --white: #FFFFFF;
+:root{
+  --sky:#DCEAF3; --blue-soft:#B9CEDD; --blue:#7898AD; --blue-deep:#496477;
+  --sand:#E9D3BF; --brown:#795C49; --paper:#F8F5EF; --ink:#344653;
+  --white:#fff; --shadow:0 12px 32px rgba(73,100,119,.10);
 }
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Tahoma, Arial, sans-serif;
-  background: linear-gradient(
-    145deg,
-    var(--blue-light),
-    var(--cream),
-    var(--brown)
-  );
-  color: var(--text);
-  min-height: 100vh;
-  line-height: 1.8;
-}
-
-header {
-  text-align: center;
-  padding: 32px 15px 30px;
-  background: linear-gradient(
-    135deg,
-    #DCEAF3,
-    #C6D9E6
-  );
-  border-bottom: 3px solid var(--brown);
-  border-radius: 0 0 32px 32px;
-}
-
-.logo {
-  width: 112px;
-  height: 112px;
-  margin: 0 auto 15px;
-  background: var(--cream);
-  border: 4px solid var(--blue);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 5px 15px #49647725;
-}
-
-.logo svg {
-  width: 91px;
-  height: 91px;
-}
-
-h1 {
-  font-size: 25px;
-  color: #344E60;
-  margin-bottom: 4px;
-}
-
-.english-name {
-  font-size: 16px;
-  color: var(--brown-dark);
-  direction: ltr;
-}
-
-.tagline {
-  display: inline-block;
-  margin-top: 13px;
-  padding: 6px 24px;
-  background: var(--blue);
-  color: white;
-  border-radius: 25px;
-  font-weight: bold;
-}
-
-.languages {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 20px auto;
-  padding: 0 12px;
-}
-
-.languages button {
-  padding: 9px 20px;
-  border-radius: 22px;
-  border: 1px solid var(--blue-mid);
-  background: var(--cream);
-  color: var(--blue-dark);
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.languages button.active {
-  background: var(--blue);
-  color: white;
-  border-color: var(--blue);
-}
-
-.container {
-  width: 100%;
-  max-width: 680px;
-  margin: auto;
-  padding: 0 15px 30px;
-}
-
-.card {
-  background: var(--cream);
-  border: 1px solid var(--brown);
-  border-radius: 20px;
-  padding: 20px;
-  margin-bottom: 16px;
-  box-shadow: 0 5px 18px #493A2F12;
-}
-
-.card h2 {
-  font-size: 18px;
-  color: var(--blue-dark);
-  border-bottom: 2px solid var(--brown);
-  padding-bottom: 10px;
-  margin-bottom: 14px;
-}
-
-.info {
-  line-height: 2.3;
-  font-size: 15px;
-}
-
-.links {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 11px;
-}
-
-.link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-width: 0;
-  padding: 12px 10px;
-  background: #EAF1F5;
-  border: 1px solid var(--blue-mid);
-  border-radius: 13px;
-  color: var(--text);
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: bold;
-  transition: 0.2s;
-  overflow-wrap: anywhere;
-}
-
-.link:hover {
-  background: var(--blue-light);
-  transform: translateY(-2px);
-}
-
-.icon {
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.phone { background: #527C96; }
-.whatsapp { background: #319B70; }
-.telegram { background: #229ED9; }
-.facebook { background: #1877F2; }
-.instagram { background: #B65A78; }
-.email { background: #795C49; }
-.scholar { background: #567C9B; }
-.research { background: #4B8D83; }
-.orcid { background: #82A84D; }
-.linkedin { background: #286D9D; }
-
-footer {
-  text-align: center;
-  background: #C6D9E6;
-  color: #344E60;
-  padding: 25px 12px;
-  border-top: 3px solid var(--brown);
-  border-radius: 25px 25px 0 0;
-}
-
-footer strong {
-  font-size: 19px;
-}
-
-footer p {
-  font-size: 12px;
-  margin-top: 6px;
-}
-
-@media(max-width:390px) {
-  .links {
-    grid-template-columns: 1fr;
-  }
-
-  h1 {
-    font-size: 21px;
-  }
-}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(145deg,#edf4f7 0%,var(--paper) 72%);color:var(--ink);
+ font-family:Tahoma,Arial,sans-serif;line-height:1.9}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(100% - 28px,760px);margin:auto;padding-bottom:38px}
+.hero{margin:18px auto 18px;padding:32px 18px 28px;text-align:center;border-radius:30px;
+ background:linear-gradient(140deg,var(--sky),#c9dce8);border:1px solid rgba(120,152,173,.25);
+ border-bottom:5px solid var(--sand);box-shadow:var(--shadow)}
+.avatar-ring{width:158px;height:158px;padding:7px;margin:0 auto 15px;border-radius:50%;
+ background:var(--paper);border:5px solid var(--blue);box-shadow:0 8px 22px #49647722}
+.avatar{width:100%;height:100%;object-fit:cover;object-position:center 22%;border-radius:50%;display:block}
+h1{font-size:clamp(25px,5vw,34px);margin:5px 0;color:#314b5b}
+.en-name{direction:ltr;color:var(--brown);font-size:20px;margin:0 0 12px}
+.tagline{display:inline-block;background:var(--blue);color:white;padding:7px 25px;border-radius:30px;font-weight:bold}
+.languages{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:20px 0}
+.lang{border:1px solid var(--blue-soft);background:var(--paper);color:var(--blue-deep);padding:8px 20px;
+ border-radius:30px;font-size:15px;font-weight:bold;cursor:pointer}
+.lang.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.card{background:var(--paper);border:1px solid #e7d6c7;border-radius:26px;padding:22px 22px;margin:18px 0;box-shadow:var(--shadow)}
+.card h2{font-size:23px;color:var(--blue-deep);margin:0 0 14px;padding-bottom:10px;border-bottom:3px solid var(--sand)}
+.info{display:grid;gap:10px}
+.info p{margin:0;padding:4px 0}
+.info strong{color:var(--brown)}
+.links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.link{display:flex;align-items:center;gap:11px;min-width:0;padding:12px;border-radius:17px;
+ background:#e8f0f4;border:1px solid var(--blue-soft);transition:.2s}
+.link:hover{transform:translateY(-2px);background:#deebf2}
+.link span:last-child{overflow-wrap:anywhere;font-size:14px}
+.ico{width:39px;height:39px;flex:0 0 39px;display:grid;place-items:center;border-radius:13px;
+ background:var(--blue);color:white}
+.ico.brown{background:var(--brown)}
+.ico svg{width:22px;height:22px;fill:currentColor}
+.section-note{font-size:13px;color:#806b5b;margin-top:-8px}
+.footer{text-align:center;color:#6c7f8b;font-size:13px;padding:12px}
+.ltr{direction:ltr;text-align:left}
+@media(max-width:480px){.links{grid-template-columns:1fr}.card{padding:18px}.hero{padding-top:25px}.avatar-ring{width:142px;height:142px}}
 </style>
 </head>
-
 <body>
-
-<header>
-
-<div class="logo">
-<svg viewBox="0 0 100 100" fill="none">
-
-<circle cx="50" cy="50" r="45"
-stroke="#7898AD" stroke-width="3"/>
-
-<path d="M50 13V65"
-stroke="#496477" stroke-width="5"
-stroke-linecap="round"/>
-
-<path d="M50 14L42 25H58L50 14Z"
-fill="#795C49"/>
-
-<path d="M37 31C20 14 12 30 31 40
-M63 31C80 14 88 30 69 40"
-stroke="#7898AD" stroke-width="4"
-stroke-linecap="round"/>
-
-<path d="M25 68Q50 56 75 68V83
-Q50 70 25 83Z"
-fill="#795C49"/>
-
-<path d="M50 67V80"
-stroke="#F8F5EF" stroke-width="2"/>
-
-<path d="M22 47Q10 37 21 28
-M78 47Q90 37 79 28"
-stroke="#7898AD" stroke-width="3"
-stroke-linecap="round"/>
-
-</svg>
-</div>
-
-<h1 id="name">دکتور نورمحمد صالح</h1>
-
-<div class="english-name">
-Dr. Noor Mohammad Saleh
-</div>
-
-<div class="tagline" id="slogan">
-سلامت پایدار
-</div>
-
+<div class="wrap">
+<header class="hero">
+  <div class="avatar-ring"><img class="avatar" src="doctor.jpg" alt="Portrait of Dr. Noor Mohammad Saleh"></div>
+  <h1 data-fa="دکتور نورمحمد صالح" data-ps="ډاکټر نورمحمد صالح" data-en="Dr. Noor Mohammad Saleh">دکتور نورمحمد صالح</h1>
+  <p class="en-name">Dr. Noor Mohammad Saleh</p>
+  <span class="tagline" data-fa="سلامت پایدار" data-ps="دوامداره روغتیا" data-en="Sustainable Health">سلامت پایدار</span>
 </header>
 
-
-<div class="languages">
-
-<button class="active" onclick="setLang('fa',this)">
-دری
-</button>
-
-<button onclick="setLang('ps',this)">
-پښتو
-</button>
-
-<button onclick="setLang('en',this)">
-English
-</button>
-
-</div>
-
-
-<main class="container">
-
-<!-- ABOUT -->
+<nav class="languages" aria-label="Language selector">
+  <button class="lang active" data-lang="fa">دری</button>
+  <button class="lang" data-lang="ps">پښتو</button>
+  <button class="lang" data-lang="en">English</button>
+</nav>
 
 <section class="card">
-
-<h2 id="aboutTitle">
-معرفی و مشخصات علمی
-</h2>
-
-<div class="info" id="about">
-
-<strong>معالج:</strong>
-امراض داخله عمومی (General Practitioner)
-<br>
-
-<strong>سمت:</strong>
-استاد دیپارتمنت‌های صحی - طبی
-<br>
-
-<strong>تحصیلات:</strong>
-تحصیلات عالی دوره انترنشیپ Medical Science در ایران
-
-</div>
-
+  <h2 data-fa="معرفی و مشخصات علمی" data-ps="پېژندنه او علمي پېژندنه" data-en="Professional & Academic Profile">معرفی و مشخصات علمی</h2>
+  <div class="info">
+    <p><strong data-fa="معالج:" data-ps="درملنه:" data-en="Practice:">معالج:</strong>
+      <span data-fa="امراض داخله عمومی (General Practitioner)" data-ps="د عمومي داخله ناروغۍ (General Practitioner)" data-en="General Practice (General Practitioner)">امراض داخله عمومی (General Practitioner)</span></p>
+    <p><strong data-fa="سمت:" data-ps="دنده:" data-en="Position:">سمت:</strong>
+      <span data-fa="استاد دیپارتمنت‌های صحی ـ طبی" data-ps="د روغتیايي ـ طبي څانګو استاد" data-en="Instructor, Health & Medical Departments">استاد دیپارتمنت‌های صحی ـ طبی</span></p>
+    <p><strong data-fa="تحصیلات:" data-ps="زده کړې:" data-en="Education:">تحصیلات:</strong>
+      <span data-fa="تحصیلات عالی؛ دوره اینترنشیپ Medical Science در ایران" data-ps="لوړې زده کړې؛ په ایران کې د Medical Science انټرنشیپ دوره" data-en="Higher studies; Medical Science internship in Iran">تحصیلات عالی؛ دوره اینترنشیپ Medical Science در ایران</span></p>
+  </div>
 </section>
-
-
-<!-- CONTACT -->
 
 <section class="card">
-
-<h2 id="contactTitle">
-راه‌های ارتباطی
-</h2>
-
-<div class="links">
-
-<a class="link" href="tel:+93795101505">
-<span class="icon phone">☎</span>
-<span id="callText">تماس: 0795101505</span>
-</a>
-
-<a class="link" href="https://wa.me/93795101505" target="_blank" rel="noopener">
-<span class="icon whatsapp">W</span>
-<span id="whatsappText">واتساپ: 0795101505</span>
-</a>
-
-<a class="link" href="https://t.me/NMSaleh1380" target="_blank" rel="noopener">
-<span class="icon telegram">➤</span>
-<span id="telegramText">تلگرام: @NMSaleh1380</span>
-</a>
-
-<a class="link" href="mailto:noormohammadsaleh2000@gmail.com">
-<span class="icon email">✉</span>
-<span id="emailText">ایمیل</span>
-</a>
-
-</div>
-
+  <h2 data-fa="راه‌های ارتباطی" data-ps="د اړیکو لارې" data-en="Contact Information">راه‌های ارتباطی</h2>
+  <div class="links">
+    <a class="link" href="tel:+93795101505"><span class="ico"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.32.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.6 21 3 13.4 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.26.2 2.46.57 3.58a1 1 0 01-.24 1.02z"/></svg></span><span><b data-fa="تماس" data-ps="اړیکه" data-en="Call">تماس</b><br><span dir="ltr">0795101505</span></span></a>
+    <a class="link" href="https://wa.me/93795101505" target="_blank" rel="noopener"><span class="ico" style="background:#25D366"><svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.8 11.8 0 0012.12 0C5.58 0 .26 5.32.26 11.86c0 2.09.55 4.13 1.59 5.93L.16 24l6.36-1.67a11.83 11.83 0 005.6 1.42h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.15-3.47-8.41zM12.13 21.7a9.82 9.82 0 01-5.01-1.37l-.36-.21-3.77.99 1.01-3.67-.24-.38a9.8 9.8 0 01-1.51-5.2c0-5.43 4.42-9.85 9.86-9.85 2.63 0 5.1 1.03 6.96 2.89a9.78 9.78 0 012.89 6.97c0 5.43-4.42 9.85-9.85 9.85zm5.41-7.38c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.68-1.64-.93-2.24-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.52s1.08 2.92 1.23 3.12c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.13-.28-.2-.58-.35z"/></svg></span><span><b data-fa="واتساپ" data-ps="واټساپ" data-en="WhatsApp">واتساپ</b><br><span dir="ltr">0795101505</span></span></a>
+    <a class="link" href="mailto:noormohammadsaleh2000@gmail.com"><span class="ico brown"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg></span><span><b data-fa="ایمیل" data-ps="برېښنالیک" data-en="Email">ایمیل</b><br><span class="ltr">noormohammadsaleh2000@gmail.com</span></span></a>
+    <a class="link" href="https://t.me/NMSaleh1380" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24"><path d="M21.8 4.2L18.5 20c-.25 1.12-.91 1.4-1.84.87l-5.1-3.76-2.46 2.37c-.27.27-.5.5-1.03.5l.37-5.2 9.47-8.56c.41-.37-.09-.58-.64-.21L5.56 13.3.52 11.72c-1.1-.34-1.12-1.1.23-1.63L20.45 2.5c.91-.34 1.71.22 1.35 1.7z"/></svg></span><span><b data-fa="تلگرام" data-ps="ټیلیګرام" data-en="Telegram">تلگرام</b><br><span dir="ltr">@NMSaleh1380</span></span></a>
+    <a class="link" href="https://www.instagram.com/nmsaleh1380" target="_blank" rel="noopener"><span class="ico brown"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3zm5 3a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm5.5-3a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg></span><span><b>Instagram</b><br><span dir="ltr">@nmsaleh1380</span></span></a>
+    <a class="link" href="https://www.facebook.com/NMSaleh1380" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8.2h2.8l.42-3.2H13.5V8.55c0-.93.26-1.56 1.6-1.56h1.7V4.12c-.3-.04-1.33-.12-2.53-.12-2.5 0-4.2 1.53-4.2 4.34v2.26H7.25v3.2h2.82V22z"/></svg></span><span><b>Facebook</b><br><span data-fa="صفحه فیسبوک" data-ps="فېسبوک پاڼه" data-en="Facebook page">صفحه فیسبوک</span></span></a>
+  </div>
 </section>
-
-
-<!-- SOCIAL -->
 
 <section class="card">
-
-<h2 id="socialTitle">
-شبکه‌های اجتماعی
-</h2>
-
-<div class="links">
-
-<a class="link"
-href="https://www.instagram.com/nmsaleh1380"
-target="_blank" rel="noopener">
-
-<span class="icon instagram">◎</span>
-Instagram
-
-</a>
-
-<a class="link"
-href="https://www.facebook.com/NMSaleh1380"
-target="_blank" rel="noopener">
-
-<span class="icon facebook">f</span>
-Facebook
-
-</a>
-
-</div>
-
+  <h2 data-fa="پروفایل‌های علمی" data-ps="علمي پروفایلونه" data-en="Academic Profiles">پروفایل‌های علمی</h2>
+  <div class="links">
+    <a class="link" href="https://scholar.google.com/citations?hl=en&user=lFvO0T8AAAAJ" target="_blank" rel="noopener"><span class="ico brown">G</span><span><b>Google Scholar</b></span></a>
+    <a class="link" href="https://www.researchgate.net/scientific-contributions/Noor-Mohammad-Saleh-2297630008" target="_blank" rel="noopener"><span class="ico">RG</span><span><b>ResearchGate</b></span></a>
+    <a class="link" href="https://orcid.org/0009-0000-1643-5744" target="_blank" rel="noopener"><span class="ico brown">iD</span><span><b>ORCID</b><br><span dir="ltr">0009-0000-1643-5744</span></span></a>
+    <a class="link" href="https://www.linkedin.com/in/noor-mohammad-saleh-300936274" target="_blank" rel="noopener"><span class="ico">in</span><span><b>LinkedIn</b></span></a>
+  </div>
 </section>
-
-
-<!-- ACADEMIC -->
-
-<section class="card">
-
-<h2 id="academicTitle">
-پروفایل‌های علمی و پژوهشی
-</h2>
-
-<div class="links">
-
-<a class="link"
-href="https://scholar.google.com/citations?hl=en&user=lFvO0T8AAAAJ"
-target="_blank" rel="noopener">
-
-<span class="icon scholar">G</span>
-Google Scholar
-
-</a>
-
-<a class="link"
-href="https://www.researchgate.net/scientific-contributions/Noor-Mohammad-Saleh-2297630008"
-target="_blank" rel="noopener">
-
-<span class="icon research">RG</span>
-ResearchGate
-
-</a>
-
-<a class="link"
-href="https://orcid.org/0009-0000-1643-5744"
-target="_blank" rel="noopener">
-
-<span class="icon orcid">iD</span>
-ORCID
-
-</a>
-
-<a class="link"
-href="https://www.linkedin.com/in/noor-mohammad-saleh-300936274"
-target="_blank" rel="noopener">
-
-<span class="icon linkedin">in</span>
-LinkedIn
-
-</a>
-
+<footer class="footer">© <span id="year"></span> Dr. Noor Mohammad Saleh · Sustainable Health</footer>
 </div>
-
-</section>
-
-</main>
-
-
-<footer>
-
-<strong id="footerSlogan">
-سلامت پایدار
-</strong>
-
-<p>Dr. Noor Mohammad Saleh</p>
-
-<p>© 2026</p>
-
-</footer>
-
-
 <script>
-
-const translations = {
-
-fa: {
-dir:"rtl",
-name:"دکتور نورمحمد صالح",
-slogan:"سلامت پایدار",
-aboutTitle:"معرفی و مشخصات علمی",
-about:"<strong>معالج:</strong> امراض داخله عمومی (General Practitioner)<br><strong>سمت:</strong> استاد دیپارتمنت‌های صحی - طبی<br><strong>تحصیلات:</strong> تحصیلات عالی دوره انترنشیپ Medical Science در ایران",
-contactTitle:"راه‌های ارتباطی",
-callText:"تماس: 0795101505",
-whatsappText:"واتساپ: 0795101505",
-telegramText:"تلگرام: @NMSaleh1380",
-emailText:"ایمیل",
-socialTitle:"شبکه‌های اجتماعی",
-academicTitle:"پروفایل‌های علمی و پژوهشی"
-},
-
-ps: {
-dir:"rtl",
-name:"ډاکټر نورمحمد صالح",
-slogan:"دوامداره روغتیا",
-aboutTitle:"پیژندنه او علمي معلومات",
-about:"<strong>درملنه:</strong> عمومي داخله ناروغۍ (General Practitioner)<br><strong>دنده:</strong> د روغتیايي او طبي څانګو استاد<br><strong>زده کړې:</strong> په ایران کې د Medical Science د انټرنشیپ لوړې زده کړې",
-contactTitle:"د اړیکو لارې",
-callText:"اړیکه: 0795101505",
-whatsappText:"واټساپ: 0795101505",
-telegramText:"ټیلیګرام: @NMSaleh1380",
-emailText:"برېښنالیک",
-socialTitle:"ټولنیزې شبکې",
-academicTitle:"علمي او څېړنیز پروفایلونه"
-},
-
-en: {
-dir:"ltr",
-name:"Dr. Noor Mohammad Saleh",
-slogan:"Sustainable Health",
-aboutTitle:"Professional & Academic Profile",
-about:"<strong>Practice:</strong> General Practitioner<br><strong>Position:</strong> Instructor, Health and Medical Departments<br><strong>Education:</strong> Higher education, Medical Science internship program in Iran",
-contactTitle:"Contact Information",
-callText:"Call: 0795101505",
-whatsappText:"WhatsApp: 0795101505",
-telegramText:"Telegram: @NMSaleh1380",
-emailText:"Email",
-socialTitle:"Social Media",
-academicTitle:"Academic & Research Profiles"
+const dictDir={fa:"rtl",ps:"rtl",en:"ltr"};
+function setLanguage(lang){
+  document.documentElement.lang=lang;
+  document.documentElement.dir=dictDir[lang]||"rtl";
+  document.querySelectorAll("[data-"+lang+"]").forEach(el=>{el.textContent=el.getAttribute("data-"+lang)});
+  document.querySelectorAll(".lang").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
 }
-
-};
-
-
-function setLang(lang, button) {
-
-const data = translations[lang];
-
-document.documentElement.lang = lang;
-document.documentElement.dir = data.dir;
-
-Object.keys(data).forEach(function(key) {
-
-const element = document.getElementById(key);
-
-if(element) {
-element.innerHTML = data[key];
-}
-
-});
-
-document.getElementById("footerSlogan").textContent =
-data.slogan;
-
-document.querySelectorAll(".languages button").forEach(
-function(btn) {
-btn.classList.remove("active");
-}
-);
-
-button.classList.add("active");
-
-}
-
+document.querySelectorAll(".lang").forEach(b=>b.addEventListener("click",()=>setLanguage(b.dataset.lang)));
+document.getElementById("year").textContent=new Date().getFullYear();
 </script>
-
 </body>
 </html>
