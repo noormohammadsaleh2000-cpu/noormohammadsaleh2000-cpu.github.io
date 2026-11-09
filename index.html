@@ -1,0 +1,549 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#DCEAF3">
+
+<title>دکتور نورمحمد صالح | سلامت پایدار</title>
+
+<meta name="description" content="صفحه رسمی پزشکی، علمی و پژوهشی دکتور نورمحمد صالح">
+<meta name="author" content="Dr. Noor Mohammad Saleh">
+
+<style>
+:root {
+  --blue-light: #DCEAF3;
+  --blue-mid: #B9CEDD;
+  --blue: #7898AD;
+  --blue-dark: #496477;
+  --brown: #E9D3BF;
+  --brown-dark: #795C49;
+  --cream: #F8F5EF;
+  --text: #493A2F;
+  --white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  background: linear-gradient(
+    145deg,
+    var(--blue-light),
+    var(--cream),
+    var(--brown)
+  );
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.8;
+}
+
+header {
+  text-align: center;
+  padding: 32px 15px 30px;
+  background: linear-gradient(
+    135deg,
+    #DCEAF3,
+    #C6D9E6
+  );
+  border-bottom: 3px solid var(--brown);
+  border-radius: 0 0 32px 32px;
+}
+
+.logo {
+  width: 112px;
+  height: 112px;
+  margin: 0 auto 15px;
+  background: var(--cream);
+  border: 4px solid var(--blue);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 15px #49647725;
+}
+
+.logo svg {
+  width: 91px;
+  height: 91px;
+}
+
+h1 {
+  font-size: 25px;
+  color: #344E60;
+  margin-bottom: 4px;
+}
+
+.english-name {
+  font-size: 16px;
+  color: var(--brown-dark);
+  direction: ltr;
+}
+
+.tagline {
+  display: inline-block;
+  margin-top: 13px;
+  padding: 6px 24px;
+  background: var(--blue);
+  color: white;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.languages {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px auto;
+  padding: 0 12px;
+}
+
+.languages button {
+  padding: 9px 20px;
+  border-radius: 22px;
+  border: 1px solid var(--blue-mid);
+  background: var(--cream);
+  color: var(--blue-dark);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.languages button.active {
+  background: var(--blue);
+  color: white;
+  border-color: var(--blue);
+}
+
+.container {
+  width: 100%;
+  max-width: 680px;
+  margin: auto;
+  padding: 0 15px 30px;
+}
+
+.card {
+  background: var(--cream);
+  border: 1px solid var(--brown);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 5px 18px #493A2F12;
+}
+
+.card h2 {
+  font-size: 18px;
+  color: var(--blue-dark);
+  border-bottom: 2px solid var(--brown);
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+}
+
+.info {
+  line-height: 2.3;
+  font-size: 15px;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 12px 10px;
+  background: #EAF1F5;
+  border: 1px solid var(--blue-mid);
+  border-radius: 13px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  transition: 0.2s;
+  overflow-wrap: anywhere;
+}
+
+.link:hover {
+  background: var(--blue-light);
+  transform: translateY(-2px);
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.phone { background: #527C96; }
+.whatsapp { background: #319B70; }
+.telegram { background: #229ED9; }
+.facebook { background: #1877F2; }
+.instagram { background: #B65A78; }
+.email { background: #795C49; }
+.scholar { background: #567C9B; }
+.research { background: #4B8D83; }
+.orcid { background: #82A84D; }
+.linkedin { background: #286D9D; }
+
+footer {
+  text-align: center;
+  background: #C6D9E6;
+  color: #344E60;
+  padding: 25px 12px;
+  border-top: 3px solid var(--brown);
+  border-radius: 25px 25px 0 0;
+}
+
+footer strong {
+  font-size: 19px;
+}
+
+footer p {
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+@media(max-width:390px) {
+  .links {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 21px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<svg viewBox="0 0 100 100" fill="none">
+
+<circle cx="50" cy="50" r="45"
+stroke="#7898AD" stroke-width="3"/>
+
+<path d="M50 13V65"
+stroke="#496477" stroke-width="5"
+stroke-linecap="round"/>
+
+<path d="M50 14L42 25H58L50 14Z"
+fill="#795C49"/>
+
+<path d="M37 31C20 14 12 30 31 40
+M63 31C80 14 88 30 69 40"
+stroke="#7898AD" stroke-width="4"
+stroke-linecap="round"/>
+
+<path d="M25 68Q50 56 75 68V83
+Q50 70 25 83Z"
+fill="#795C49"/>
+
+<path d="M50 67V80"
+stroke="#F8F5EF" stroke-width="2"/>
+
+<path d="M22 47Q10 37 21 28
+M78 47Q90 37 79 28"
+stroke="#7898AD" stroke-width="3"
+stroke-linecap="round"/>
+
+</svg>
+</div>
+
+<h1 id="name">دکتور نورمحمد صالح</h1>
+
+<div class="english-name">
+Dr. Noor Mohammad Saleh
+</div>
+
+<div class="tagline" id="slogan">
+سلامت پایدار
+</div>
+
+</header>
+
+
+<div class="languages">
+
+<button class="active" onclick="setLang('fa',this)">
+دری
+</button>
+
+<button onclick="setLang('ps',this)">
+پښتو
+</button>
+
+<button onclick="setLang('en',this)">
+English
+</button>
+
+</div>
+
+
+<main class="container">
+
+<!-- ABOUT -->
+
+<section class="card">
+
+<h2 id="aboutTitle">
+معرفی و مشخصات علمی
+</h2>
+
+<div class="info" id="about">
+
+<strong>معالج:</strong>
+امراض داخله عمومی (General Practitioner)
+<br>
+
+<strong>سمت:</strong>
+استاد دیپارتمنت‌های صحی - طبی
+<br>
+
+<strong>تحصیلات:</strong>
+تحصیلات عالی دوره انترنشیپ Medical Science در ایران
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="card">
+
+<h2 id="contactTitle">
+راه‌های ارتباطی
+</h2>
+
+<div class="links">
+
+<a class="link" href="tel:+93795101505">
+<span class="icon phone">☎</span>
+<span id="callText">تماس: 0795101505</span>
+</a>
+
+<a class="link" href="https://wa.me/93795101505" target="_blank" rel="noopener">
+<span class="icon whatsapp">W</span>
+<span id="whatsappText">واتساپ: 0795101505</span>
+</a>
+
+<a class="link" href="https://t.me/NMSaleh1380" target="_blank" rel="noopener">
+<span class="icon telegram">➤</span>
+<span id="telegramText">تلگرام: @NMSaleh1380</span>
+</a>
+
+<a class="link" href="mailto:noormohammadsaleh2000@gmail.com">
+<span class="icon email">✉</span>
+<span id="emailText">ایمیل</span>
+</a>
+
+</div>
+
+</section>
+
+
+<!-- SOCIAL -->
+
+<section class="card">
+
+<h2 id="socialTitle">
+شبکه‌های اجتماعی
+</h2>
+
+<div class="links">
+
+<a class="link"
+href="https://www.instagram.com/nmsaleh1380"
+target="_blank" rel="noopener">
+
+<span class="icon instagram">◎</span>
+Instagram
+
+</a>
+
+<a class="link"
+href="https://www.facebook.com/NMSaleh1380"
+target="_blank" rel="noopener">
+
+<span class="icon facebook">f</span>
+Facebook
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ACADEMIC -->
+
+<section class="card">
+
+<h2 id="academicTitle">
+پروفایل‌های علمی و پژوهشی
+</h2>
+
+<div class="links">
+
+<a class="link"
+href="https://scholar.google.com/citations?hl=en&user=lFvO0T8AAAAJ"
+target="_blank" rel="noopener">
+
+<span class="icon scholar">G</span>
+Google Scholar
+
+</a>
+
+<a class="link"
+href="https://www.researchgate.net/scientific-contributions/Noor-Mohammad-Saleh-2297630008"
+target="_blank" rel="noopener">
+
+<span class="icon research">RG</span>
+ResearchGate
+
+</a>
+
+<a class="link"
+href="https://orcid.org/0009-0000-1643-5744"
+target="_blank" rel="noopener">
+
+<span class="icon orcid">iD</span>
+ORCID
+
+</a>
+
+<a class="link"
+href="https://www.linkedin.com/in/noor-mohammad-saleh-300936274"
+target="_blank" rel="noopener">
+
+<span class="icon linkedin">in</span>
+LinkedIn
+
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<strong id="footerSlogan">
+سلامت پایدار
+</strong>
+
+<p>Dr. Noor Mohammad Saleh</p>
+
+<p>© 2026</p>
+
+</footer>
+
+
+<script>
+
+const translations = {
+
+fa: {
+dir:"rtl",
+name:"دکتور نورمحمد صالح",
+slogan:"سلامت پایدار",
+aboutTitle:"معرفی و مشخصات علمی",
+about:"<strong>معالج:</strong> امراض داخله عمومی (General Practitioner)<br><strong>سمت:</strong> استاد دیپارتمنت‌های صحی - طبی<br><strong>تحصیلات:</strong> تحصیلات عالی دوره انترنشیپ Medical Science در ایران",
+contactTitle:"راه‌های ارتباطی",
+callText:"تماس: 0795101505",
+whatsappText:"واتساپ: 0795101505",
+telegramText:"تلگرام: @NMSaleh1380",
+emailText:"ایمیل",
+socialTitle:"شبکه‌های اجتماعی",
+academicTitle:"پروفایل‌های علمی و پژوهشی"
+},
+
+ps: {
+dir:"rtl",
+name:"ډاکټر نورمحمد صالح",
+slogan:"دوامداره روغتیا",
+aboutTitle:"پیژندنه او علمي معلومات",
+about:"<strong>درملنه:</strong> عمومي داخله ناروغۍ (General Practitioner)<br><strong>دنده:</strong> د روغتیايي او طبي څانګو استاد<br><strong>زده کړې:</strong> په ایران کې د Medical Science د انټرنشیپ لوړې زده کړې",
+contactTitle:"د اړیکو لارې",
+callText:"اړیکه: 0795101505",
+whatsappText:"واټساپ: 0795101505",
+telegramText:"ټیلیګرام: @NMSaleh1380",
+emailText:"برېښنالیک",
+socialTitle:"ټولنیزې شبکې",
+academicTitle:"علمي او څېړنیز پروفایلونه"
+},
+
+en: {
+dir:"ltr",
+name:"Dr. Noor Mohammad Saleh",
+slogan:"Sustainable Health",
+aboutTitle:"Professional & Academic Profile",
+about:"<strong>Practice:</strong> General Practitioner<br><strong>Position:</strong> Instructor, Health and Medical Departments<br><strong>Education:</strong> Higher education, Medical Science internship program in Iran",
+contactTitle:"Contact Information",
+callText:"Call: 0795101505",
+whatsappText:"WhatsApp: 0795101505",
+telegramText:"Telegram: @NMSaleh1380",
+emailText:"Email",
+socialTitle:"Social Media",
+academicTitle:"Academic & Research Profiles"
+}
+
+};
+
+
+function setLang(lang, button) {
+
+const data = translations[lang];
+
+document.documentElement.lang = lang;
+document.documentElement.dir = data.dir;
+
+Object.keys(data).forEach(function(key) {
+
+const element = document.getElementById(key);
+
+if(element) {
+element.innerHTML = data[key];
+}
+
+});
+
+document.getElementById("footerSlogan").textContent =
+data.slogan;
+
+document.querySelectorAll(".languages button").forEach(
+function(btn) {
+btn.classList.remove("active");
+}
+);
+
+button.classList.add("active");
+
+}
+
+</script>
+
+</body>
+</html>
