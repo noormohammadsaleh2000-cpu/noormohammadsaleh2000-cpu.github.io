@@ -4,21 +4,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#173D5B">
-<meta name="description" content="Official medical and academic profile of Dr. Noor Mohammad Saleh | Sustainable Health">
-<title>دکتور نورمحمد صالح | سلامت پایدار</title>
+<meta name="theme-color" content="#102F50">
+<meta name="description" content="Official Medical and Academic Profile of Dr. Noor Mohammad Saleh">
+<title>Dr. Noor Mohammad Saleh | Sustainable Health</title>
 
 <style>
 :root{
-  --sky:#DCEAF5;
-  --blue-soft:#AFC8DC;
-  --blue:#397DA8;
-  --blue-deep:#173D5B;
-  --sand:#D6B783;
-  --brown:#795C49;
-  --paper:#FFFFFF;
-  --ink:#23394B;
-  --shadow:0 12px 35px rgba(23,61,91,.10);
+  --navy:#102F50;
+  --navy2:#173F65;
+  --blue:#397EAA;
+  --blue-light:#DCE8F0;
+  --gold:#C6A45D;
+  --gold-light:#E8D4A4;
+  --white:#FFFFFF;
+  --paper:#F5F7FA;
+  --ink:#24394D;
+  --muted:#687D90;
+  --border:#DCE4EB;
+  --shadow:0 14px 38px rgba(16,47,80,.10);
 }
 
 *{box-sizing:border-box}
@@ -27,74 +30,85 @@ html{scroll-behavior:smooth}
 
 body{
   margin:0;
-  background:
-    radial-gradient(circle at 10% 5%,#DCEAF5 0,transparent 35%),
-    linear-gradient(145deg,#EAF2F8 0%,#F5F3EF 55%,#E7EFF5 100%);
-  color:var(--ink);
   font-family:Tahoma,Arial,sans-serif;
-  line-height:1.95;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 5% 5%,#DCE8F0 0,transparent 30%),
+    linear-gradient(135deg,#F5F7FA,#EAF0F5);
+  line-height:1.9;
 }
 
-a{color:inherit;text-decoration:none}
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
 button{font-family:inherit}
 
 .wrap{
-  width:min(100% - 30px,760px);
+  width:min(100% - 30px,780px);
   margin:auto;
   padding-bottom:45px;
 }
 
-/* HERO */
+/* ROYAL HEADER */
+
 .hero{
-  margin:22px auto 20px;
-  padding:38px 20px 32px;
-  text-align:center;
-  border-radius:30px;
-  background:linear-gradient(135deg,#FFFFFF 0%,#E3EFF7 55%,#C9DDEB 100%);
-  border:1px solid #C5D8E6;
-  border-bottom:5px solid var(--sand);
-  box-shadow:0 18px 45px rgba(23,61,91,.13);
   position:relative;
   overflow:hidden;
+  margin:24px auto 20px;
+  padding:42px 22px 36px;
+  text-align:center;
+  border-radius:28px;
+  background:
+    radial-gradient(circle at 90% 5%,rgba(232,212,164,.14),transparent 32%),
+    linear-gradient(135deg,#102F50 0%,#173F65 65%,#245879 100%);
+  border:1px solid rgba(198,164,93,.55);
+  border-bottom:5px solid var(--gold);
+  box-shadow:0 20px 45px rgba(16,47,80,.22);
+  color:white;
 }
 
 .hero::before{
   content:"";
   position:absolute;
-  width:220px;
-  height:220px;
+  width:260px;
+  height:260px;
+  border:1px solid rgba(232,212,164,.22);
   border-radius:50%;
-  background:rgba(57,125,168,.07);
-  top:-115px;
-  right:-75px;
+  top:-145px;
+  right:-95px;
   pointer-events:none;
 }
 
 .hero::after{
   content:"";
   position:absolute;
-  width:170px;
-  height:170px;
+  width:210px;
+  height:210px;
+  border:1px solid rgba(232,212,164,.16);
   border-radius:50%;
-  background:rgba(214,183,131,.12);
-  bottom:-110px;
-  left:-55px;
+  bottom:-145px;
+  left:-80px;
   pointer-events:none;
 }
 
-.avatar-ring{
-  width:165px;
-  height:165px;
-  padding:6px;
-  margin:0 auto 17px;
-  border-radius:50%;
-  background:#fff;
-  border:4px solid var(--blue);
-  box-shadow:
-    0 0 0 5px rgba(57,125,168,.12),
-    0 12px 28px rgba(23,61,91,.20);
+.hero-content{
   position:relative;
   z-index:1;
+}
+
+.avatar-ring{
+  width:168px;
+  height:168px;
+  padding:6px;
+  margin:0 auto 20px;
+  border-radius:50%;
+  border:3px solid var(--gold);
+  background:#fff;
+  box-shadow:
+    0 0 0 6px rgba(198,164,93,.15),
+    0 12px 30px rgba(0,0,0,.25);
 }
 
 .avatar{
@@ -107,120 +121,129 @@ button{font-family:inherit}
 }
 
 h1{
-  font-size:clamp(26px,5vw,35px);
+  font-size:clamp(27px,5vw,36px);
   margin:8px 0;
-  color:#173D5B;
+  color:#FFFFFF;
   font-weight:800;
-  letter-spacing:-.5px;
 }
 
 .en-name{
   direction:ltr;
-  color:#795C49;
+  color:var(--gold-light);
   font-size:19px;
   font-weight:600;
-  margin:0 0 15px;
+  margin:0 0 17px;
 }
 
 .tagline{
   display:inline-block;
-  background:linear-gradient(135deg,#245D83,#397DA8);
-  color:white;
-  padding:8px 30px;
+  padding:8px 32px;
   border-radius:30px;
+  border:1px solid var(--gold);
+  background:rgba(255,255,255,.09);
+  color:#F2D99F;
   font-weight:bold;
-  box-shadow:0 5px 14px rgba(23,61,91,.18);
+  letter-spacing:.3px;
 }
 
-/* LANGUAGES */
+/* LANGUAGE SELECTOR */
+
 .languages{
   display:flex;
   justify-content:center;
-  gap:11px;
   flex-wrap:wrap;
-  margin:22px 0 25px;
+  gap:11px;
+  margin:24px 0;
 }
 
 .lang{
-  border:1px solid #B6CCDC;
   background:#fff;
-  color:#244E6C;
-  padding:9px 23px;
+  color:var(--navy);
+  border:1px solid #C8D5E0;
+  padding:9px 24px;
   border-radius:30px;
   font-size:15px;
   font-weight:bold;
   cursor:pointer;
-  transition:all .25s ease;
-  box-shadow:0 3px 9px rgba(23,61,91,.05);
+  transition:.25s ease;
+  box-shadow:0 4px 12px rgba(16,47,80,.06);
 }
 
 .lang:hover{
-  background:#E2EDF5;
-  border-color:var(--blue);
+  border-color:var(--gold);
   transform:translateY(-2px);
 }
 
 .lang.active{
-  background:linear-gradient(135deg,#173D5B,#397DA8);
-  color:#fff;
-  border-color:#173D5B;
-  box-shadow:0 5px 15px rgba(23,61,91,.22);
+  background:var(--navy);
+  color:white;
+  border-color:var(--gold);
+  box-shadow:0 5px 15px rgba(16,47,80,.18);
 }
 
-/* CARDS */
+/* MAIN SECTIONS */
+
 .card{
-  background:rgba(255,255,255,.96);
-  border:1px solid #DCE6ED;
-  border-radius:25px;
-  padding:25px 23px;
+  position:relative;
+  background:rgba(255,255,255,.94);
+  border:1px solid var(--border);
+  border-radius:23px;
+  padding:25px 24px;
   margin:20px 0;
   box-shadow:var(--shadow);
-  transition:box-shadow .25s ease;
+  overflow:hidden;
+  transition:box-shadow .3s ease,transform .3s ease;
+}
+
+.card:hover{
+  box-shadow:0 18px 42px rgba(16,47,80,.14);
 }
 
 .card h2{
+  color:var(--navy);
   font-size:22px;
-  color:#173D5B;
-  margin:0 0 19px;
-  padding-bottom:12px;
-  border-bottom:2px solid #D6B783;
-  position:relative;
   font-weight:800;
+  margin:0 0 20px;
+  padding-bottom:12px;
+  border-bottom:2px solid var(--gold-light);
+  position:relative;
 }
 
 .card h2::after{
   content:"";
-  display:block;
-  width:65px;
-  height:3px;
-  background:#397DA8;
-  border-radius:5px;
   position:absolute;
   bottom:-2px;
   right:0;
+  width:75px;
+  height:3px;
+  background:var(--gold);
+  border-radius:5px;
 }
 
-/* INFORMATION */
+/* ACADEMIC INFORMATION */
+
 .info{
   display:grid;
-  gap:12px;
+  gap:13px;
 }
 
 .info p{
   margin:0;
-  padding:10px 13px;
-  background:#F1F6FA;
-  border-right:3px solid #397DA8;
-  border-radius:9px;
-  color:#344B5D;
+  padding:12px 14px;
+  background:linear-gradient(100deg,#F5F8FB,#EDF3F7);
+  border:1px solid #E2EAF0;
+  border-right:4px solid var(--gold);
+  border-radius:11px;
+  color:#344C61;
 }
 
 .info strong{
-  color:#795C49;
+  color:var(--navy);
   font-weight:800;
 }
 
-/* LINKS */
+/* CONTACT CARDS */
+
 .links{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
@@ -233,39 +256,40 @@ h1{
   gap:12px;
   min-width:0;
   padding:14px;
-  border-radius:17px;
-  background:#EDF4F9;
-  border:1px solid #D0E0EB;
+  background:linear-gradient(135deg,#F5F8FB,#EAF1F6);
+  border:1px solid #D9E4EC;
+  border-radius:16px;
   transition:all .25s ease;
-  box-shadow:0 3px 9px rgba(23,61,91,.035);
+  box-shadow:0 4px 12px rgba(16,47,80,.04);
 }
 
 .link:hover{
-  transform:translateY(-3px);
-  background:#E0EDF6;
-  border-color:#8EADC3;
-  box-shadow:0 9px 20px rgba(23,61,91,.11);
+  transform:translateY(-4px);
+  background:#FFFFFF;
+  border-color:var(--gold);
+  box-shadow:0 10px 23px rgba(16,47,80,.11);
 }
 
 .link span:last-child{
   overflow-wrap:anywhere;
   font-size:14px;
-  color:#29465C;
+  color:#344C61;
 }
 
 .link b{
-  color:#173D5B;
+  color:var(--navy);
   font-weight:800;
 }
 
-/* ORIGINAL ICONS - UNCHANGED */
+/* ORIGINAL ICONS - SHAPE PRESERVED */
+
 .ico{
   width:39px;
   height:39px;
   flex:0 0 39px;
   display:grid;
   place-items:center;
-  border-radius:13px;
+  border-radius:12px;
   background:var(--blue);
   color:white;
 }
@@ -281,19 +305,14 @@ h1{
 }
 
 /* FOOTER */
-.section-note{
-  font-size:13px;
-  color:#795C49;
-  margin-top:-8px;
-}
 
 .footer{
   text-align:center;
-  color:#526D80;
+  padding:22px 12px;
+  margin-top:28px;
+  border-top:1px solid #D5DFE7;
+  color:var(--muted);
   font-size:13px;
-  padding:20px 12px;
-  border-top:1px solid #D4E0E8;
-  margin-top:25px;
 }
 
 .ltr{
@@ -301,34 +320,41 @@ h1{
   text-align:left;
 }
 
+.section-note{
+  font-size:13px;
+  color:var(--muted);
+}
+
 /* ACCESSIBILITY */
+
 a:focus-visible,
 button:focus-visible{
-  outline:3px solid #D6B783;
+  outline:3px solid var(--gold);
   outline-offset:4px;
 }
 
 /* MOBILE */
+
 @media(max-width:480px){
 
   .wrap{
-    width:min(100% - 22px,760px);
+    width:min(100% - 22px,780px);
   }
 
   .hero{
-    padding:29px 16px 27px;
-    border-radius:25px;
+    padding:32px 15px 29px;
+    border-radius:23px;
   }
 
   .avatar-ring{
-    width:148px;
-    height:148px;
+    width:150px;
+    height:150px;
   }
 
   .card{
     padding:20px 16px;
-    border-radius:21px;
     margin:16px 0;
+    border-radius:19px;
   }
 
   .card h2{
@@ -355,9 +381,7 @@ button:focus-visible{
 
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  *,
-  *::before,
-  *::after{
+  *,*::before,*::after{
     transition:none!important;
     animation:none!important;
   }
@@ -369,15 +393,19 @@ button:focus-visible{
 <div class="wrap">
 
 <header class="hero">
-  <div class="avatar-ring">
-    <img class="avatar" src="doctor.jpg" alt="Portrait of Dr. Noor Mohammad Saleh">
+  <div class="hero-content">
+
+    <div class="avatar-ring">
+      <img class="avatar" src="doctor.jpg" alt="Portrait of Dr. Noor Mohammad Saleh">
+    </div>
+
+    <h1 data-fa="دکتور نورمحمد صالح" data-ps="ډاکټر نورمحمد صالح" data-en="Dr. Noor Mohammad Saleh">دکتور نورمحمد صالح</h1>
+
+    <p class="en-name">Dr. Noor Mohammad Saleh</p>
+
+    <span class="tagline" data-fa="سلامت پایدار" data-ps="دوامداره روغتیا" data-en="Sustainable Health">سلامت پایدار</span>
+
   </div>
-
-  <h1 data-fa="دکتور نورمحمد صالح" data-ps="ډاکټر نورمحمد صالح" data-en="Dr. Noor Mohammad Saleh">دکتور نورمحمد صالح</h1>
-
-  <p class="en-name">Dr. Noor Mohammad Saleh</p>
-
-  <span class="tagline" data-fa="سلامت پایدار" data-ps="دوامداره روغتیا" data-en="Sustainable Health">سلامت پایدار</span>
 </header>
 
 <nav class="languages" aria-label="Language selector">
@@ -390,7 +418,6 @@ button:focus-visible{
   <h2 data-fa="معرفی و مشخصات علمی" data-ps="پېژندنه او علمي پېژندنه" data-en="Professional & Academic Profile">معرفی و مشخصات علمی</h2>
 
   <div class="info">
-
     <p>
       <strong data-fa="معالج:" data-ps="درملنه:" data-en="Practice:">معالج:</strong>
       <span data-fa="امراض داخله عمومی (General Practitioner)" data-ps="د عمومي داخله ناروغۍ (General Practitioner)" data-en="General Practice (General Practitioner)">امراض داخله عمومی (General Practitioner)</span>
@@ -405,7 +432,6 @@ button:focus-visible{
       <strong data-fa="تحصیلات:" data-ps="زده کړې:" data-en="Education:">تحصیلات:</strong>
       <span data-fa="تحصیلات عالی؛ دوره اینترنشیپ Medical Science در ایران" data-ps="لوړې زده کړې؛ په ایران کې د Medical Science انټرنشیپ دوره" data-en="Higher studies; Medical Science internship in Iran">تحصیلات عالی؛ دوره اینترنشیپ Medical Science در ایران</span>
     </p>
-
   </div>
 </section>
 
