@@ -4,21 +4,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#173D5B">
+<meta name="theme-color" content="#071A35">
 <meta name="description" content="Official medical and academic profile of Dr. Noor Mohammad Saleh | Sustainable Health">
 <title>دکتور نورمحمد صالح | سلامت پایدار</title>
 
 <style>
 :root{
-  --sky:#DCEAF5;
-  --blue-soft:#AFC8DC;
-  --blue:#397DA8;
-  --blue-deep:#173D5B;
-  --sand:#D6B783;
-  --brown:#795C49;
-  --paper:#FFFFFF;
-  --ink:#23394B;
-  --shadow:0 12px 35px rgba(23,61,91,.10);
+  --navy:#071A35;
+  --navy2:#0B2850;
+  --blue:#103D70;
+  --blue2:#15538A;
+  --blue-light:#24699D;
+  --gold:#D8B45E;
+  --gold-light:#F4D98F;
+  --gold-dark:#A98232;
+  --white:#F7F9FC;
+  --text:#EAF1FA;
+  --muted:#B9C9DC;
+  --border:rgba(216,180,94,.48);
+  --shadow:0 15px 38px rgba(0,0,0,.28);
 }
 
 *{box-sizing:border-box}
@@ -27,10 +31,12 @@ html{scroll-behavior:smooth}
 
 body{
   margin:0;
+  min-height:100vh;
   background:
-    radial-gradient(circle at 10% 5%,#DCEAF5 0,transparent 35%),
-    linear-gradient(145deg,#EAF2F8 0%,#F5F3EF 55%,#E7EFF5 100%);
-  color:var(--ink);
+    radial-gradient(ellipse at 15% 5%,rgba(30,91,145,.45),transparent 38%),
+    radial-gradient(ellipse at 90% 90%,rgba(19,72,123,.35),transparent 40%),
+    linear-gradient(145deg,#06152C 0%,#0A2345 48%,#071A35 100%);
+  color:var(--text);
   font-family:Tahoma,Arial,sans-serif;
   line-height:1.95;
 }
@@ -41,19 +47,22 @@ button{font-family:inherit}
 .wrap{
   width:min(100% - 30px,760px);
   margin:auto;
-  padding-bottom:45px;
+  padding-bottom:35px;
 }
 
 /* HERO */
+
 .hero{
   margin:22px auto 20px;
   padding:38px 20px 32px;
   text-align:center;
   border-radius:30px;
-  background:linear-gradient(135deg,#FFFFFF 0%,#E3EFF7 55%,#C9DDEB 100%);
-  border:1px solid #C5D8E6;
-  border-bottom:5px solid var(--sand);
-  box-shadow:0 18px 45px rgba(23,61,91,.13);
+  background:
+    radial-gradient(circle at 50% 0%,rgba(216,180,94,.16),transparent 55%),
+    linear-gradient(145deg,#123D70 0%,#0B2850 55%,#071A35 100%);
+  border:1px solid var(--border);
+  border-bottom:5px solid var(--gold);
+  box-shadow:0 20px 48px rgba(0,0,0,.34);
   position:relative;
   overflow:hidden;
 }
@@ -61,24 +70,24 @@ button{font-family:inherit}
 .hero::before{
   content:"";
   position:absolute;
-  width:220px;
-  height:220px;
+  width:240px;
+  height:240px;
   border-radius:50%;
-  background:rgba(57,125,168,.07);
-  top:-115px;
-  right:-75px;
+  background:rgba(216,180,94,.09);
+  top:-130px;
+  right:-85px;
   pointer-events:none;
 }
 
 .hero::after{
   content:"";
   position:absolute;
-  width:170px;
-  height:170px;
+  width:190px;
+  height:190px;
   border-radius:50%;
-  background:rgba(214,183,131,.12);
-  bottom:-110px;
-  left:-55px;
+  background:rgba(36,105,157,.20);
+  bottom:-125px;
+  left:-65px;
   pointer-events:none;
 }
 
@@ -88,11 +97,11 @@ button{font-family:inherit}
   padding:6px;
   margin:0 auto 17px;
   border-radius:50%;
-  background:#fff;
-  border:4px solid var(--blue);
+  background:linear-gradient(135deg,var(--gold-light),var(--gold-dark));
+  border:3px solid var(--gold-light);
   box-shadow:
-    0 0 0 5px rgba(57,125,168,.12),
-    0 12px 28px rgba(23,61,91,.20);
+    0 0 0 6px rgba(216,180,94,.13),
+    0 12px 30px rgba(0,0,0,.4);
   position:relative;
   z-index:1;
 }
@@ -104,19 +113,21 @@ button{font-family:inherit}
   object-position:center 22%;
   border-radius:50%;
   display:block;
+  border:3px solid var(--navy);
 }
 
 h1{
   font-size:clamp(26px,5vw,35px);
   margin:8px 0;
-  color:#173D5B;
+  color:var(--gold-light);
   font-weight:800;
   letter-spacing:-.5px;
+  text-shadow:0 3px 15px rgba(0,0,0,.3);
 }
 
 .en-name{
   direction:ltr;
-  color:#795C49;
+  color:var(--gold);
   font-size:19px;
   font-weight:600;
   margin:0 0 15px;
@@ -124,15 +135,16 @@ h1{
 
 .tagline{
   display:inline-block;
-  background:linear-gradient(135deg,#245D83,#397DA8);
-  color:white;
+  background:linear-gradient(135deg,#D8B45E,#F4D98F,#B68B38);
+  color:#102849;
   padding:8px 30px;
   border-radius:30px;
   font-weight:bold;
-  box-shadow:0 5px 14px rgba(23,61,91,.18);
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
 }
 
 /* LANGUAGES */
+
 .languages{
   display:flex;
   justify-content:center;
@@ -142,48 +154,63 @@ h1{
 }
 
 .lang{
-  border:1px solid #B6CCDC;
-  background:#fff;
-  color:#244E6C;
+  border:1px solid var(--border);
+  background:linear-gradient(145deg,#123D70,#0B2850);
+  color:var(--gold-light);
   padding:9px 23px;
   border-radius:30px;
   font-size:15px;
   font-weight:bold;
   cursor:pointer;
   transition:all .25s ease;
-  box-shadow:0 3px 9px rgba(23,61,91,.05);
+  box-shadow:0 4px 12px rgba(0,0,0,.2);
 }
 
 .lang:hover{
-  background:#E2EDF5;
-  border-color:var(--blue);
+  background:linear-gradient(135deg,#1B568A,#123D70);
+  border-color:var(--gold-light);
   transform:translateY(-2px);
 }
 
 .lang.active{
-  background:linear-gradient(135deg,#173D5B,#397DA8);
-  color:#fff;
-  border-color:#173D5B;
-  box-shadow:0 5px 15px rgba(23,61,91,.22);
+  background:linear-gradient(135deg,#D8B45E,#F4D98F);
+  color:#102849;
+  border-color:var(--gold-light);
+  box-shadow:0 5px 18px rgba(216,180,94,.25);
 }
 
 /* CARDS */
+
 .card{
-  background:rgba(255,255,255,.96);
-  border:1px solid #DCE6ED;
+  background:
+    linear-gradient(145deg,rgba(19,62,108,.97),rgba(8,31,62,.98));
+  border:1px solid var(--border);
   border-radius:25px;
   padding:25px 23px;
   margin:20px 0;
   box-shadow:var(--shadow);
-  transition:box-shadow .25s ease;
+  transition:box-shadow .25s ease,transform .25s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  right:0;
+  width:100%;
+  height:3px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  opacity:.8;
 }
 
 .card h2{
   font-size:22px;
-  color:#173D5B;
+  color:var(--gold-light);
   margin:0 0 19px;
   padding-bottom:12px;
-  border-bottom:2px solid #D6B783;
+  border-bottom:1px solid rgba(216,180,94,.45);
   position:relative;
   font-weight:800;
 }
@@ -191,9 +218,9 @@ h1{
 .card h2::after{
   content:"";
   display:block;
-  width:65px;
+  width:70px;
   height:3px;
-  background:#397DA8;
+  background:linear-gradient(90deg,var(--gold-dark),var(--gold-light));
   border-radius:5px;
   position:absolute;
   bottom:-2px;
@@ -201,6 +228,7 @@ h1{
 }
 
 /* INFORMATION */
+
 .info{
   display:grid;
   gap:12px;
@@ -208,19 +236,27 @@ h1{
 
 .info p{
   margin:0;
-  padding:10px 13px;
-  background:#F1F6FA;
-  border-right:3px solid #397DA8;
-  border-radius:9px;
-  color:#344B5D;
+  padding:11px 14px;
+  background:linear-gradient(100deg,rgba(5,24,49,.65),rgba(22,74,119,.55));
+  border:1px solid rgba(216,180,94,.23);
+  border-right:4px solid var(--gold);
+  border-radius:10px;
+  color:#EAF1FA;
+  transition:all .2s ease;
+}
+
+.info p:hover{
+  background:rgba(28,83,138,.55);
+  border-color:rgba(216,180,94,.55);
 }
 
 .info strong{
-  color:#795C49;
+  color:var(--gold-light);
   font-weight:800;
 }
 
 /* LINKS */
+
 .links{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
@@ -234,31 +270,32 @@ h1{
   min-width:0;
   padding:14px;
   border-radius:17px;
-  background:#EDF4F9;
-  border:1px solid #D0E0EB;
+  background:linear-gradient(135deg,#123D70,#0A2850);
+  border:1px solid rgba(216,180,94,.38);
   transition:all .25s ease;
-  box-shadow:0 3px 9px rgba(23,61,91,.035);
+  box-shadow:0 4px 12px rgba(0,0,0,.18);
 }
 
 .link:hover{
-  transform:translateY(-3px);
-  background:#E0EDF6;
-  border-color:#8EADC3;
-  box-shadow:0 9px 20px rgba(23,61,91,.11);
+  transform:translateY(-4px);
+  background:linear-gradient(135deg,#1A568A,#10365F);
+  border-color:var(--gold-light);
+  box-shadow:0 10px 22px rgba(0,0,0,.3);
 }
 
 .link span:last-child{
   overflow-wrap:anywhere;
   font-size:14px;
-  color:#29465C;
+  color:#EAF1FA;
 }
 
 .link b{
-  color:#173D5B;
+  color:var(--gold-light);
   font-weight:800;
 }
 
-/* ORIGINAL ICONS - UNCHANGED */
+/* ORIGINAL ICONS - SVG PATHS UNCHANGED */
+
 .ico{
   width:39px;
   height:39px;
@@ -266,12 +303,14 @@ h1{
   display:grid;
   place-items:center;
   border-radius:13px;
-  background:var(--blue);
-  color:white;
+  background:linear-gradient(135deg,#D8B45E,#A98232);
+  color:#102849;
+  border:1px solid rgba(255,255,255,.12);
 }
 
 .ico.brown{
-  background:var(--brown);
+  background:linear-gradient(135deg,#F0D58D,#B68B38);
+  color:#102849;
 }
 
 .ico svg{
@@ -281,19 +320,21 @@ h1{
 }
 
 /* FOOTER */
+
 .section-note{
   font-size:13px;
-  color:#795C49;
+  color:var(--gold);
   margin-top:-8px;
 }
 
 .footer{
   text-align:center;
-  color:#526D80;
+  color:var(--gold-light);
   font-size:13px;
-  padding:20px 12px;
-  border-top:1px solid #D4E0E8;
+  padding:22px 12px;
+  border-top:1px solid var(--border);
   margin-top:25px;
+  background:linear-gradient(180deg,transparent,rgba(7,26,53,.45));
 }
 
 .ltr{
@@ -302,13 +343,15 @@ h1{
 }
 
 /* ACCESSIBILITY */
+
 a:focus-visible,
 button:focus-visible{
-  outline:3px solid #D6B783;
+  outline:3px solid var(--gold-light);
   outline-offset:4px;
 }
 
 /* MOBILE */
+
 @media(max-width:480px){
 
   .wrap{
@@ -390,22 +433,18 @@ button:focus-visible{
   <h2 data-fa="معرفی و مشخصات علمی" data-ps="پېژندنه او علمي پېژندنه" data-en="Professional & Academic Profile">معرفی و مشخصات علمی</h2>
 
   <div class="info">
-
     <p>
       <strong data-fa="معالج:" data-ps="درملنه:" data-en="Practice:">معالج:</strong>
       <span data-fa="امراض داخله عمومی (General Practitioner)" data-ps="د عمومي داخله ناروغۍ (General Practitioner)" data-en="General Practice (General Practitioner)">امراض داخله عمومی (General Practitioner)</span>
     </p>
-
     <p>
       <strong data-fa="سمت:" data-ps="دنده:" data-en="Position:">سمت:</strong>
       <span data-fa="استاد دیپارتمنت‌های صحی ـ طبی" data-ps="د روغتیايي ـ طبي څانګو استاد" data-en="Instructor, Health & Medical Departments">استاد دیپارتمنت‌های صحی ـ طبی</span>
     </p>
-
     <p>
       <strong data-fa="تحصیلات:" data-ps="زده کړې:" data-en="Education:">تحصیلات:</strong>
       <span data-fa="تحصیلات عالی؛ دوره اینترنشیپ Medical Science در ایران" data-ps="لوړې زده کړې؛ په ایران کې د Medical Science انټرنشیپ دوره" data-en="Higher studies; Medical Science internship in Iran">تحصیلات عالی؛ دوره اینترنشیپ Medical Science در ایران</span>
     </p>
-
   </div>
 </section>
 
@@ -425,7 +464,7 @@ button:focus-visible{
     </a>
 
     <a class="link" href="https://wa.me/93795101505" target="_blank" rel="noopener">
-      <span class="ico" style="background:#25D366">
+      <span class="ico" style="background:#25D366;color:white">
         <svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.8 11.8 0 0012.12 0C5.58 0 .26 5.32.26 11.86c0 2.09.55 4.13 1.59 5.93L.16 24l6.36-1.67a11.83 11.83 0 005.6 1.42h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.15-3.47-8.41zM12.13 21.7a9.82 9.82 0 01-5.01-1.37l-.36-.21-3.77.99 1.01-3.67-.24-.38a9.8 9.8 0 01-1.51-5.2c0-5.43 4.42-9.85 9.86-9.85 2.63 0 5.1 1.03 6.96 2.89a9.78 9.78 0 012.89 6.97c0 5.43-4.42 9.85-9.85 9.85zm5.41-7.38c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.68-1.64-.93-2.24-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.52s1.08 2.92 1.23 3.12c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.13-.28-.2-.58-.35z"/></svg>
       </span>
       <span>
